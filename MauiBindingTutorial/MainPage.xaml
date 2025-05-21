@@ -13,7 +13,10 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Entry x:Name="entry" />
-        <Label Text="{Binding Text.Length, Source={Reference entry}}" />
+        <Entry
+            x:Name="entry"
+            MaxLength="32"
+            Text="" />
+        <Label x:Name="countLabel" Text="{Binding Text.Length, x:DataType=Entry, Source={Reference entry}}" />
     </VerticalStackLayout>
 </ContentPage>
